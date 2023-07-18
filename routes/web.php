@@ -20,7 +20,8 @@ use App\Http\Controllers\ProsesController;
 // });
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/getDiet', [HomeController::class, 'getLabel']);
-
-Route::get('/dashboard', [HomeController::class, 'dash']);
+ 
+Route::get('/dashboard', [HomeController::class, 'dash']); 
+Route::get('/cetak/{pasienID}', [HomeController::class, 'printPriview']);
 
 Route::post('/insert-diet', [ProsesController::class, 'addDiet']);

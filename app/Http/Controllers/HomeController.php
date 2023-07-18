@@ -39,6 +39,12 @@ class HomeController extends Controller
         // return view('pages.index', ['getvalues' => $getvalue]);
     }
  
+  
+    public function printPriview()
+    {
+        // $getvalue = getDiet::all(); 
+        return view('pages.dashboard.printPriview');
+    }
     /**
      * Store a newly created resource in storage.
      */

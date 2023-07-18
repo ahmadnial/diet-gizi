@@ -27,25 +27,24 @@
                         <td>{{$item['nama']}}</td>
                         <td>{{$item['pasienID']}}</td>
                         <td>{{$item['DPJP']}}</td>
-                        <form method="POST" action="{{ url('/insert-diet') }}"> 
-                            @csrf
+                        {{-- <form method="POST" action="{{ url('/insert-diet') }}"> 
+                            @csrf --}}
                         <td>{{$item['diet']}}</td>
                         <td>
-                            <button type="submit" class="btn btn-success" >Save</button>
+                            <a href="{{ url('/cetak') }}" class="btnprn btn btn btn-success btn-sm">Print Preview</a>
+                            {{-- <button type="submit" id="btnprn" name="btnprn" class="btnprn btn btn-success btn-sm" >cetak</button> --}}
                         </td>
-                    </form>
+                    {{-- </form> --}}
                 </tr>
                 @endforeach 
             </tbody>
-            {{-- @foreach ($getvalues as $z)
-                <td>
-                    <button type="submit" class="btn btn-success" >view</button>
-                    {{$z['diet']}}
-                </td>  
-                @endforeach --}}
             </table>
         </div>
     </div>
-
-        
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.btnprn').printPage();
+        });
+        </script>
 @endsection
+  

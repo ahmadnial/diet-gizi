@@ -301,7 +301,7 @@
     <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
-         --}}
+        
       </div>
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
@@ -330,7 +330,7 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
-            <span>Layout Options</span> <i class="fa fa-angle-left pull-right"></i>
+            <span>Layanan</span> <i class="fa fa-angle-left pull-right"></i>
             <span class="label label-primary pull-right">5</span>
           </a>
           <ul class="treeview-menu">

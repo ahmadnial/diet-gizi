@@ -44,7 +44,7 @@
                         </td>
                         
                         <td>
-                            <button type="submit" class="btn btn-success" name="click" id="click" onclick="zimbabwe(this)">Save</button>
+                            <button type="submit" class="btn btn-sm btn-success" name="click" id="click" onclick="zimbabwe(this)"><i class="fa fa-save"></i></button>
                         </td>  
                         @endif
                       

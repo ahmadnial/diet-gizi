@@ -15,18 +15,70 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $krisan = 'RI001';
-        $xmlString = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
-        // $xmlObject = simplexml_load_string($xmlString);
-        $collection = json_decode($xmlString, true);
+        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        $collection = json_decode($source, true);
+        $getval = getDiet::all();
         // dd($collection);
-        return view('pages.index', ['collection' => $collection]);
+        return view('pages.index', ['collection' => $collection, 'getval' => $getval]);
+        // return view('pages.index', ['collection' => $collection]);
     }
+
+    public function krisan()
+    {
+        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        $collection = json_decode($source, true);
+        $getval = getDiet::all();
+        // dd($collection);
+        return view('pages.krisan', ['collection' => $collection, 'getval' => $getval]);
+        // return view('pages.index', ['collection' => $collection]);
+    }
+
+    public function matahari()
+    {
+        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        $collection = json_decode($source, true);
+        $getval = getDiet::all();
+        // dd($collection);
+        return view('pages.matahari', ['collection' => $collection, 'getval' => $getval]);
+        // return view('pages.index', ['collection' => $collection]);
+    }
+
+
+    public function tulip()
+    {
+        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        $collection = json_decode($source, true);
+        $getval = getDiet::all();
+        // dd($collection);
+        return view('pages.tulip', ['collection' => $collection, 'getval' => $getval]);
+        // return view('pages.index', ['collection' => $collection]);
+    }
+
+    public function lili()
+    {
+        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        $collection = json_decode($source, true);
+        $getval = getDiet::all();
+        // dd($collection);
+        return view('pages.lili', ['collection' => $collection, 'getval' => $getval]);
+        // return view('pages.index', ['collection' => $collection]);
+    }
+
+    public function isolasi()
+    {
+        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        $collection = json_decode($source, true);
+        $getval = getDiet::all();
+        // dd($collection);
+        return view('pages.isolasi', ['collection' => $collection, 'getval' => $getval]);
+        // return view('pages.index', ['collection' => $collection]);
+    }
+
 
     public function dash()
     {
-        $getval = getDiet::all(); 
-        return view('pages.dashboard.index', ['getval' => $getval]);
+        // $getval = getDiet::all();  
+        // return view('pages.dashboard.index', ['getval' => $getval]);
     }
 
     /**
@@ -38,8 +90,8 @@ class HomeController extends Controller
         // // dd($getValue);
         // return view('pages.index', ['getvalues' => $getvalue]);
     }
- 
-  
+
+
     public function printPriview()
     {
         // $getvalue = getDiet::all(); 

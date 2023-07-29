@@ -19,9 +19,14 @@ use App\Http\Controllers\ProsesController;
 //     return view('welcome'); 
 // });
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/krisan', [HomeController::class, 'krisan']);
+Route::get('/matahari', [HomeController::class, 'matahari']);
+Route::get('/tulip', [HomeController::class, 'tulip']);
+Route::get('/lili', [HomeController::class, 'lili']);
+Route::get('/isolasi', [HomeController::class, 'isolasi']);
 Route::get('/getDiet', [HomeController::class, 'getLabel']);
- 
-Route::get('/dashboard', [HomeController::class, 'dash']); 
+
+Route::get('/dashboard', [HomeController::class, 'dash']);
 Route::get('/cetak/{pasienID}', [HomeController::class, 'printPriview']);
 
 Route::post('/insert-diet', [ProsesController::class, 'addDiet']);

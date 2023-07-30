@@ -77,8 +77,8 @@ class HomeController extends Controller
 
     public function dash()
     {
-        // $getval = getDiet::all();  
-        // return view('pages.dashboard.index', ['getval' => $getval]);
+        $getval = getDiet::all();
+        return view('pages.dashboard.index', ['getval' => $getval]);
     }
 
     /**
@@ -92,10 +92,11 @@ class HomeController extends Controller
     }
 
 
-    public function printPriview()
+    public function printPriview($id)
     {
-        // $getvalue = getDiet::all(); 
-        return view('pages.dashboard.printPriview');
+        // $getval = getDiet::find('id', $id)->get();
+        $getval = DB::table('diet-gizi')->where('id', $id)->get();
+        return view('pages.dashboard.printPriview', ['val' => $getval]);
     }
     /**
      * Store a newly created resource in storage.

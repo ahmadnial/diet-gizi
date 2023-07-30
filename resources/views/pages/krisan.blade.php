@@ -36,7 +36,7 @@
                             @csrf
                         <td>
                             <input type="hidden" name="bed" value="{{$item['BedName']}}">
-                            <input type="hidden" name="nama" value="{{$item['PasienName']}}">
+                            <input type="hidden" name="nama" value="{{$item['PasienName']}}"> 
                             <input type="hidden" name="pasienID" value="{{$item['PasienID']}}">
                             <input type="hidden" name="DPJP" value="{{$item['DokterName']}}">
                             <input type="text" class="form-control" name="diet">
@@ -46,15 +46,15 @@
                             <button type="submit" class="btn btn-sm btn-success" name="click" id="click" onclick="zimbabwe(this)"><i class="fa fa-save"></i></button>
                         </td>  
                         @endif
-                        {{-- <td>
+                        <td>
                             @foreach ($getval as $ze)
-                            @if (empty($ze->diet) )
-                            {{ 'data blm ada' }}
+                            @if ($item['PasienID']==$ze['pasienID']) 
+                            {{ $ze->diet }}
                             @else
-                            {{ $ze->diet }} 
+                            {{ 'kosong' }} 
                             @endif
                             @endforeach
-                        </td> --}}
+                        </td>
                     </form>
                 </tr>
                 @endforeach 

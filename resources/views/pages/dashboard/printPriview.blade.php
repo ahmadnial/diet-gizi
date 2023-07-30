@@ -1,3 +1,4 @@
+<div class="container">
 <div>
     <table cellspacing="0" cellpadding="0" style="width:263.15pt; border:0.75pt solid #000000; border-collapse:collapse;">
         <tbody>
@@ -17,6 +18,9 @@
                         <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;"><br></p>
                     </div>
                 </td>
+                @foreach ($val as $item)
+                    {{-- {{$item->id}} --}}
+                    {{-- {{$item->bed}} --}}
                 <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:bottom;">
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
                 </td>
@@ -32,7 +36,8 @@
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">:</p>
                 </td>
                 <td style="width:189pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                   
+                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp; {{$item->bed}}</p>
                 </td>
             </tr>
             <tr style="height:15.75pt;">
@@ -43,7 +48,8 @@
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">:</p>
                 </td>
                 <td style="width:189pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                    
+                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp; {{$item->nama}} </p>
                 </td>
             </tr>
             <tr style="height:15.75pt;">
@@ -54,7 +60,7 @@
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">:</p>
                 </td>
                 <td style="width:189pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;  {{$item->pasienID}}</p>
                 </td>
             </tr>
             <tr style="height:15.75pt;">
@@ -65,7 +71,7 @@
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">:</p>
                 </td>
                 <td style="width:189pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;</p>
+                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;  {{$item->diet}}</p>
                 </td>
             </tr>
             <tr style="height:15pt;">
@@ -95,14 +101,14 @@
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:'Times New Roman';">&nbsp;</span></p>
                 </td>
             </tr>
+                @endforeach
+
         </tbody>
     </table>
     <p style="margin-top:0pt; margin-bottom:8pt;">&nbsp;</p>
 </div>
-
-<script>
-    function printPage() {
-       window.print();
-    }
- </script>
+</div>
+{{-- <script>
+window.print();
+ </script> --}}
 

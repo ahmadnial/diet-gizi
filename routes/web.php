@@ -27,6 +27,6 @@ Route::get('/isolasi', [HomeController::class, 'isolasi']);
 Route::get('/getDiet', [HomeController::class, 'getLabel']);
 
 Route::get('/dashboard', [HomeController::class, 'dash']);
-Route::get('/cetak/{pasienID}', [HomeController::class, 'printPriview']);
+Route::get('/cetak/{id}', [HomeController::class, 'printPriview']);
 
 Route::post('/insert-diet', [ProsesController::class, 'addDiet']);

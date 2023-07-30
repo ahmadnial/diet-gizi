@@ -31,7 +31,7 @@
                             @csrf --}}
                         <td>{{$item['diet']}}</td>
                         <td>
-                            <a href="{{ url('/cetak') }}" class="btnprn btn btn btn-success btn-sm" onclick="printPage()">Print Preview</a>
+                            <a href="{{ url('/cetak',$item->id) }}" class="btnprn btn btn btn-success btn-sm" onclick="printPage()">Print Preview</a>
                             {{-- <button type="submit" id="btnprn" name="btnprn" class="btnprn btn btn-success btn-sm" >cetak</button> --}}
                         </td>
                     {{-- </form> --}}

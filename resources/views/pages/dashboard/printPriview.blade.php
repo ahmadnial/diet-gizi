@@ -108,7 +108,7 @@
     <p style="margin-top:0pt; margin-bottom:8pt;">&nbsp;</p>
 </div>
 </div>
-{{-- <script>
+<script>
 window.print();
- </script> --}}
+ </script>
 

@@ -44,19 +44,18 @@
                         </td>
                         
                         <td>
-                            <button type="submit" class="btn btn-sm btn-success" name="click" id="click" onclick="zimbabwe(this)"><i class="fa fa-save"></i></button>
-                        </td>  
-                        @endif
-                      
-                        {{-- <td>
                             @foreach ($getval as $ze)
-                            @if (empty($ze->diet) )
-                            {{ 'data blm ada' }}
+                            @if ($item['PasienID']==$ze['pasienID']) 
+                            {{ $ze->diet }} <i class="fa fa-check"></i>
                             @else
-                            {{ $ze->diet }} 
+                            {{ '' }} 
                             @endif
                             @endforeach
-                        </td> --}}
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-sm btn-success" name="click" id="click"><i class="fa fa-save"></i></button>
+                        </td>  
+                        @endif
                     </form>
                 </tr>
                 @endforeach 

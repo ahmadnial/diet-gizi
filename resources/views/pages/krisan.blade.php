@@ -9,7 +9,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
+              <table id="table2" class="table table-bordered table-hover">
                 <thead class="bg-purple">
                     <tr>
                         <th>No</th>
@@ -41,26 +41,25 @@
                             <input type="hidden" name="DPJP" value="{{$item['DokterName']}}">
                             <input type="text" class="form-control" name="diet">
                         </td>
-                        
+                        <td>
+                            @foreach ($getval as $ze)
+                            @if ($item['PasienID']==$ze['pasienID']) 
+                            {{ $ze->diet }} <i class="fa fa-check"></i>
+                            @else
+                            {{ '' }} 
+                            @endif
+                            @endforeach
+                        </td>
                         <td>
                             <button type="submit" class="btn btn-sm btn-success" name="click" id="click" onclick="zimbabwe(this)"><i class="fa fa-save"></i></button>
                         </td>  
                         @endif
-                        <td>
-                            @foreach ($getval as $ze)
-                            @if ($item['PasienID']==$ze['pasienID']) 
-                            {{ $ze->diet }}
-                            @else
-                            {{ 'kosong' }} 
-                            @endif
-                            @endforeach
-                        </td>
                     </form>
                 </tr>
                 @endforeach 
             </tbody>
             </table>
-        </div>
+        </div> 
     </div>
     </div>
 </div>

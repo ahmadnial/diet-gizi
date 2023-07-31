@@ -41,20 +41,19 @@
                             <input type="hidden" name="DPJP" value="{{$item['DokterName']}}">
                             <input type="text" class="form-control" name="diet">                                
                         </td>
-                        
+                        <td>
+                            @foreach ($getval as $ze)
+                            @if ($item['PasienID']==$ze['pasienID']) 
+                            {{ $ze->diet }} <i class="fa fa-check"></i>
+                            @else
+                            {{ '' }} 
+                            @endif
+                            @endforeach
+                        </td>
                         <td>
                             <button type="submit" class="btn btn-sm btn-success" name="click" id="click" onclick="zimbabwe(this)"><i class="fa fa-save"></i></button>
                         </td>  
                         @endif
-                        {{-- <td>
-                            @foreach ($getval as $ze)
-                            @if (empty($ze->diet) )
-                            {{ 'data blm ada' }}
-                            @else
-                            {{ $ze->diet }} 
-                            @endif
-                            @endforeach
-                        </td> --}}
                     </form>
                 </tr>
                 @endforeach 

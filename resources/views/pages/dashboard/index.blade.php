@@ -1,11 +1,15 @@
 @extends('pages.master')
 
 @section('konten')
-
-    <div class="comtainer">
-        {{-- <h3>BANGSAL KRISAN</h3> --}}
-        <div class="table">
-            <table class="table table-bordered">
+<div class="row">
+        <div class="col-xs-12">
+          <div class="box box-warning">
+            <div class="box-header">
+              <h3 class="box-title">List pasien Bangsal Krisan</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="table2" class="table table-bordered table-hover">
                 <thead class="bg-purple">
                     <tr>
                         <th>No</th>
@@ -31,7 +35,7 @@
                             @csrf --}}
                         <td>{{$item['diet']}}</td>
                         <td>
-                            <a href="{{ url('/cetak',$item->id) }}" class="btnprn btn btn btn-success btn-sm" onclick="printPage()">Print Preview</a>
+                            <a href="{{ url('/cetak',$item->id) }}" class="btnprn btn btn btn-primary btn-sm" ><i class="fa fa-print"></i></a>
                             {{-- <button type="submit" id="btnprn" name="btnprn" class="btnprn btn btn-success btn-sm" >cetak</button> --}}
                         </td>
                     {{-- </form> --}}
@@ -41,10 +45,6 @@
             </table>
         </div>
     </div>
-    {{-- <script type="text/javascript">
-        $(document).ready(function(){
-        $('.btnprn').printPage();
-        });
-        </script> --}}
+
 @endsection
   

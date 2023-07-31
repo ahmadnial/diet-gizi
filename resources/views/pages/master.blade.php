@@ -329,7 +329,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-bed"></i>
             <span>Layanan</span> <i class="fa fa-angle-left pull-right"></i>
             <span class="label label-primary pull-right">5</span>
           </a>
@@ -397,7 +397,7 @@
 <!-- jQuery 2.2.0 -->
 <script src="/src/plugins/jQuery/jQuery-2.2.0.min.js"></script>
 <!-- jQuery UI 1.11.4 --> 
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="/src/dist/js/jquery.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
@@ -431,8 +431,8 @@
 <script src="/src/dist/js/pages/dashboard.js"></script>
 <script>
   $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
+    $("#table1").DataTable();
+    $('#table2').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": true,

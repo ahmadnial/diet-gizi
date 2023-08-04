@@ -11,5 +11,7 @@ class diet extends Model
 
     protected $table = 'diet-gizi';
 
-    protected $fillable = ['bed','nama', 'pasienID', 'DPJP', 'diet'];
+    protected $fillable = [
+        'bed', 'nama', 'pasienID', 'DPJP', 'diet_pagi', 'diet_pagi_konsistensi', 'diet_siang', 'diet_siang_konsistensi', 'diet_sore', 'diet_sore_konsistensi'
+    ];
 }

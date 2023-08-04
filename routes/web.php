@@ -29,4 +29,6 @@ Route::get('/getDiet', [HomeController::class, 'getLabel']);
 Route::get('/dashboard', [HomeController::class, 'dash']);
 Route::get('/cetak/{id}', [HomeController::class, 'printPriview']);
 
-Route::post('/insert-diet', [ProsesController::class, 'addDiet']);
+// Route::post('/insert-diet', [ProsesController::class, 'addDiet']);
+Route::post('/addDiet', [ProsesController::class, 'addDiet']);
+Route::put('/viewEdit/{PasienID}', [ProsesController::class, 'update']);

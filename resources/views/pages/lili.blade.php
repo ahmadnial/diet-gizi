@@ -18,8 +18,8 @@
                         <th>Pasien ID</th> 
                         <th>DPJD</th> 
                         <th>Input Diet</th>
-                        <th>Action</th>
                         <th>Diet</th>
+                        <th>Action</th>
                     </tr>
                 </thead> 
                 <?php $no='1'; ?>

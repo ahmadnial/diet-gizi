@@ -17,7 +17,12 @@ return new class extends Migration
             $table->string('nama');
             $table->string('pasienID');
             $table->string('DPJP');
-            $table->string('diet');
+            $table->string('diet_pagi');
+            $table->string('diet_pagi_konsistensi');
+            $table->string('diet_siang');
+            $table->string('diet_siang_konsistensi');
+            $table->string('diet_sore');
+            $table->string('diet_sore_konsistensi');
             $table->timestamps();
         });
     }

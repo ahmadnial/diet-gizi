@@ -22,7 +22,12 @@ class ProsesController extends Controller
             'nama' => 'required',
             'pasienID' => 'required',
             'DPJP' => 'required',
-            'diet' => 'required',
+            'diet_pagi' => 'required',
+            'diet_pagi_konsistensi' => 'required',
+            'diet_siang' => 'required',
+            'diet_siang_konsistensi' => 'required',
+            'diet_sore' => 'required',
+            'diet_sore_konsistensi' => 'required',
         ]);
 
         $data = diet::create($request->all());
@@ -37,43 +42,36 @@ class ProsesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        //
+        diet::whereId($id)->first();
+        return back();
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $PasienID)
     {
-        //
+        $PasienID = diet::find($PasienID);
+        $request->validate([
+            'diet_pagi' => 'required',
+            'diet_pagi_konsistensi' => 'required',
+            'diet_siang' => 'required',
+            'diet_siang_konsistensi' => 'required',
+            'diet_sore' => 'required',
+            'diet_sore_konsistensi' => 'required',
+        ]);
+        $data = diet::create($request->all());
+        if ($data->save()) {
+            toast('Berhasil Tersimpan', 'success')->autoClose(5000);
+            return back();
+        } else {
+            toast('Gagal Tersimpan!', 'error')->autoClose(5000);
+            return redirect('/');
+        }
     }
 
     /**

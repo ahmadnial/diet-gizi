@@ -19,8 +19,8 @@
                         <th>Pasien ID</th> 
                         <th>DPJD</th> 
                         <th>Input Diet</th>
-                        <th>Action</th>
                         <th>Diet</th>
+                        <th>Action</th>
                     </tr>
                 </thead> 
                 <?php $no='1'; ?>
@@ -54,6 +54,7 @@
                         </td>
                         <td>
                             <button type="submit" class="btn btn-sm btn-success" name="click" id="click"><i class="fa fa-save"></i></button>
+                            <button type="submit" class="btn btn-sm btn-warning" name="click" id="click"><i class="fa fa-edit"></i></button>
                         </td>  
                         @endif
                     </form>

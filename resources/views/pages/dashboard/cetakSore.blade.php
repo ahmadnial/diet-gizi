@@ -70,8 +70,8 @@
                 <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:bottom;">
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">:</p>
                 </td>
-                <td style="width:189pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;  {{$item->diet}}</p>
+                <td style="width:189pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;"> 
+                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;  {{$item->diet_sore}}</p>
                 </td>
             </tr>
             <tr style="height:15pt;">

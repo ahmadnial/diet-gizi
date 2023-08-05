@@ -121,7 +121,8 @@
                                         </div>
                                             <div class="modal-body">
                                             <!--FORM VIEW EDIT-->
-                                            <form action="{{ url('/viewEdit') }}/{{$item['PasienID']}}" method="put">
+                                            <form action="{{ url('/viewEdit', $item['PasienID']) }}" method="POST">
+                                                @method('PUT')
                                                 @csrf
                                                 <div class="hdr">
                                                     Diet Untuk Pasien a.n : <b>{{$item['PasienName']}}</b> , Ruang : <b>{{$item['BedName']}}</b>

@@ -92,11 +92,25 @@ class HomeController extends Controller
     }
 
 
-    public function printPriview($id)
+    public function cetakPagi($id)
     {
         // $getval = getDiet::find('id', $id)->get();
         $getval = DB::table('diet-gizi')->where('id', $id)->get();
-        return view('pages.dashboard.printPriview', ['val' => $getval]);
+        return view('pages.dashboard.cetakPagi', ['val' => $getval]);
+    }
+
+    public function cetakSiang($id)
+    {
+        // $getval = getDiet::find('id', $id)->get();
+        $getval = DB::table('diet-gizi')->where('id', $id)->get();
+        return view('pages.dashboard.cetakSiang', ['val' => $getval]);
+    }
+
+    public function cetakSore($id)
+    {
+        // $getval = getDiet::find('id', $id)->get();
+        $getval = DB::table('diet-gizi')->where('id', $id)->get();
+        return view('pages.dashboard.cetakSore', ['val' => $getval]);
     }
     /**
      * Store a newly created resource in storage.

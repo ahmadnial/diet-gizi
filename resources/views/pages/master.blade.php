@@ -339,6 +339,7 @@
             <li><a href="{{ url('/lili') }}"><i class="fa fa-circle-o"></i> Lili</a></li>
             <li><a href="{{ url('/tulip') }}"><i class="fa fa-circle-o"></i> Tulip</a></li>
             <li><a href="{{ url('/isolasi') }}"><i class="fa fa-circle-o"></i> Isolasi</a></li>
+            <li><a href="{{ url('/perinatal') }}"><i class="fa fa-circle-o"></i> Perinatal</a></li>
             {{-- <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li> --}}
           </ul>
         </li>

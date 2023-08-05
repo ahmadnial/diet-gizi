@@ -5,7 +5,7 @@
         <div class="col-xs-12">
           <div class="box box-warning">
             <div class="box-header">
-              <h3 class="box-title">List pasien Bangsal Tulip</h3>
+              <h3 class="box-title">List pasien Bangsal Perinatal</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -25,7 +25,7 @@
                 <?php $no='1'; ?>
                 <tbody>
                     @foreach ($collection as $item)
-                    @if ($item['LayananID']==='RI006')
+                    @if ($item['LayananID']==='RI008')
                     <tr>
                         <td><?=$no++;?></td>
                         <td>{{$item['BedName']}}</td>

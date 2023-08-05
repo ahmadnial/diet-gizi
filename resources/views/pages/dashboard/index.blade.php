@@ -63,7 +63,7 @@
                                                 {{-- @if ($item['nama']==$ze['nama']) --}}
                                                     
                                                 <div class="form-group">
-                                                    <label for="">Diet Pagi</label>
+                                                    <a href="{{ url('/cetakPagi',$item->id) }}"><i class="fa fa-print"> Diet Pagi</i></a>
                                                     <input type="text" class="form-control" id="diet_pagi" name="diet_pagi" placeholder="Masukan Jenis Diet.." value="{{$item['diet_pagi']}}" readonly>
                                                 </div>
                                                 <div class="form-group">
@@ -71,7 +71,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="">Diet Siang</label>
+                                                    <a href="{{ url('/cetakSiang',$item->id) }}"><i class="fa fa-print"> Diet Siang</i></a>
                                                     <input type="text" class="form-control" id="diet_siang" name="diet_siang" placeholder="Masukan Jenis Diet.." value="{{$item['diet_siang']}}" readonly>
                                                 </div>
                                                 <div class="form-group">
@@ -79,7 +79,7 @@
                                                 </div>
                                                 
                                                 <div class="form-group">
-                                                    <label for="">Diet Sore</label>
+                                                    <a href="{{ url('/cetakSore',$item->id) }}"><i class="fa fa-print"> Diet Sore</i></a>
                                                     <input type="text" class="form-control" id="diet_sore" name="diet_sore" placeholder="Masukan Jenis Diet.." value="{{$item['diet_sore']}}" readonly>
                                                 </div>
                                                 <div class="form-group">

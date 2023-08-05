@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\diet;
+use App\Models\updateDiet;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Auth\Events\Validated;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -29,7 +30,7 @@ class ProsesController extends Controller
             'diet_sore' => 'required',
             'diet_sore_konsistensi' => 'required',
         ]);
-
+        dd($request);
         $data = diet::create($request->all());
 
         if ($data->save()) {
@@ -37,7 +38,7 @@ class ProsesController extends Controller
             return back();
         } else {
             toast('Gagal Tersimpan!', 'error')->autoClose(5000);
-            return redirect('/');
+            return back();
         }
     }
 
@@ -55,7 +56,7 @@ class ProsesController extends Controller
      */
     public function update(Request $request, string $PasienID)
     {
-        $PasienID = diet::find($PasienID);
+        // $PasienID = diet::find($PasienID);
         $request->validate([
             'diet_pagi' => 'required',
             'diet_pagi_konsistensi' => 'required',
@@ -64,12 +65,22 @@ class ProsesController extends Controller
             'diet_sore' => 'required',
             'diet_sore_konsistensi' => 'required',
         ]);
-        $data = diet::create($request->all());
-        if ($data->save()) {
-            toast('Berhasil Tersimpan', 'success')->autoClose(5000);
+
+        $data2 = updateDiet::where('pasienID', $request->PasienID)
+            ->update([
+                'diet_pagi' => $request->diet_pagi,
+                'diet_pagi_konsistensi' => $request->diet_pagi_konsistensi,
+                'diet_siang' => $request->diet_siang,
+                'diet_siang_konsistensi' => $request->diet_siang_konsistensi,
+                'diet_sore' => $request->diet_sore,
+                'diet_sore_konsistensi' => $request->diet_sore_konsistensi,
+            ]);
+
+        if ($data2) {
+            toast('Data Berhasil Terupdate', 'success')->autoClose(6000);
             return back();
         } else {
-            toast('Gagal Tersimpan!', 'error')->autoClose(5000);
+            toast('Gagal!', 'error')->autoClose(7000);
             return redirect('/');
         }
     }

@@ -15,9 +15,7 @@ use App\Http\Controllers\ProsesController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome'); 
-// });
+// User Perawat GET
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/krisan', [HomeController::class, 'krisan']);
 Route::get('/matahari', [HomeController::class, 'matahari']);
@@ -25,10 +23,16 @@ Route::get('/tulip', [HomeController::class, 'tulip']);
 Route::get('/lili', [HomeController::class, 'lili']);
 Route::get('/isolasi', [HomeController::class, 'isolasi']);
 Route::get('/getDiet', [HomeController::class, 'getLabel']);
+// End User Perawat
 
+// User Perawat POST & PUT
+Route::post('/addDiet', [ProsesController::class, 'addDiet'])->name('addDiet');
+Route::put('/viewEdit/{PasienID}', [ProsesController::class, 'update'])->name('viewEdit');
+// End User Perawat POST & PUT
+
+//Admin Gizi
 Route::get('/dashboard', [HomeController::class, 'dash']);
-Route::get('/cetak/{id}', [HomeController::class, 'printPriview']);
-
-// Route::post('/insert-diet', [ProsesController::class, 'addDiet']);
-Route::post('/addDiet', [ProsesController::class, 'addDiet']);
-Route::put('/viewEdit/{PasienID}', [ProsesController::class, 'update']);
+Route::get('/cetakPagi/{id}', [HomeController::class, 'cetakPagi']);
+Route::get('/cetakSiang/{id}', [HomeController::class, 'cetakSiang']);
+Route::get('/cetakSore/{id}', [HomeController::class, 'cetakSore']);
+//End Amdin Gizi

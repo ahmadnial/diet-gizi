@@ -15,7 +15,7 @@ class ProsesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function addDiet(Request $request): RedirectResponse
+    public function addDiet(Request $request)
     {
 
         $request->validate([
@@ -30,7 +30,7 @@ class ProsesController extends Controller
             'diet_sore' => 'required',
             'diet_sore_konsistensi' => 'required',
         ]);
-        dd($request);
+        // dd($request);
         $data = diet::create($request->all());
 
         if ($data->save()) {
@@ -54,9 +54,9 @@ class ProsesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $PasienID)
+    public function update(Request $request)
     {
-        // $PasienID = diet::find($PasienID);
+        // $PasienID = updateDiet::find($PasienID);
         $request->validate([
             'diet_pagi' => 'required',
             'diet_pagi_konsistensi' => 'required',
@@ -65,6 +65,7 @@ class ProsesController extends Controller
             'diet_sore' => 'required',
             'diet_sore_konsistensi' => 'required',
         ]);
+        // dd($request);
 
         $data2 = updateDiet::where('pasienID', $request->PasienID)
             ->update([
@@ -81,7 +82,7 @@ class ProsesController extends Controller
             return back();
         } else {
             toast('Gagal!', 'error')->autoClose(7000);
-            return redirect('/');
+            return back();
         }
     }
 

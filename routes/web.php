@@ -26,8 +26,8 @@ Route::get('/getDiet', [HomeController::class, 'getLabel']);
 // End User Perawat
 
 // User Perawat POST & PUT
-Route::post('/addDiet', [ProsesController::class, 'addDiet'])->name('addDiet');
-Route::put('/viewEdit/{PasienID}', [ProsesController::class, 'update'])->name('viewEdit');
+Route::post('/addDiet', [ProsesController::class, 'addDiet'])->name('plus');
+Route::put('/viewedit/{PasienID}', [ProsesController::class, 'update'])->name('viewedit');
 // End User Perawat POST & PUT
 
 //Admin Gizi

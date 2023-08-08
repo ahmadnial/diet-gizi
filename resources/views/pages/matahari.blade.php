@@ -41,7 +41,7 @@
                             @endif 
                             @endforeach
                         </td>
-                        <td class="">
+                        <td>
                             <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTambah{{$item['PasienID']}}"><i class="fa fa-plus"> Add</i></button>
                             <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalViewEdit{{$item['PasienID']}}"><i class="fa fa-folder-open"> View/Edit</i></button>
                             {{-- <button type="" class="btn btn-sm btn-warning" name="edit" id="edit"><i class="fa fa-edit"></i></button> --}}
@@ -62,6 +62,7 @@
                                             <div class="modal-body">
                                             <!--FORM TAMBAH BARANG-->
                                             <form action="{{ url('/addDiet') }}" method="post">
+                                                @method('POST')
                                                 @csrf
                                                 <input type="hidden" class="form-control" id="bed" name="bed" value="{{$item['BedName']}}">
                                                 <input type="hidden" class="form-control" id="nama" name="nama" value="{{$item['PasienName']}}">
@@ -103,7 +104,7 @@
                                             <!--END FORM TAMBAH BARANG-->
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
 
                     {{-- END MODAL Add --}}
@@ -121,7 +122,7 @@
                                         </div>
                                             <div class="modal-body">
                                             <!--FORM VIEW EDIT-->
-                                            <form action="{{ url('/viewEdit', $item['PasienID']) }}" method="POST">
+                                            <form action="{{url('/viewedit', $item['PasienID'])}}" method="POST">
                                                 @method('PUT')
                                                 @csrf
                                                 <div class="hdr">
@@ -129,7 +130,7 @@
                                                 </div>
                                                 <br>
                                                 @foreach ($getval as $ze)
-                                                @if ($item['PasienName']==$ze['nama'])
+                                                @if ($item['PasienID']==$ze['pasienID'])
                                                     
                                                 <div class="form-group">
                                                     <label for="">Diet Pagi</label>
@@ -156,24 +157,24 @@
                                                 </div>
                                                 
                                                 <div class="button float-right">
-                                                    <button type="submit" class="btn btn-success float-right"><i class="fa fa-pencil-square-o"> &nbsp; Update</i></button>
-                                            </div>
+                                                    <button type="submit" class="btn btn-info float-right"><i class="fa fa-pencil-square-o"> &nbsp; Update</i></button>
+                                                </div>
+                                                <!--END FORM TAMBAH BARANG-->
+                                                {{-- @else
+                                                    <div class="bg-danger">
+                                                        {{'kosong! Entahlah,Sepertinya Jenengan Belum Input Data Diet'}}
+                                                    </div>                                                --}}
+                                                @endif
+                                            @endforeach
                                         </form>
-                                        <!--END FORM TAMBAH BARANG-->
-                                        {{-- @else
-                                            <div class="bg-danger">
-                                                {{'kosong! Entahlah,Sepertinya Jenengan Belum Input Data Diet'}}
-                                            </div>                                                --}}
-                                        @endif
-                                        @endforeach
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
 
                     {{-- END MODAL --}}
-                @endforeach 
-            </tbody>
+                    @endforeach 
+                </tbody>
             </table>
         </div> 
     </div>

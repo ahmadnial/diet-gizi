@@ -15,12 +15,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
-        $collection = json_decode($source, true);
-        $getval = getDiet::all();
-        // dd($collection);
-        return view('pages.index', ['collection' => $collection, 'getval' => $getval]);
-        // return view('pages.index', ['collection' => $collection]);
+        // $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        // $collection = json_decode($source, true);
+        // $getval = getDiet::all();
+        return view('pages.index');
     }
 
     public function krisan()

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\diet;
 use App\Models\updateDiet;
+use App\Models\isPulang;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Auth\Events\Validated;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -82,6 +83,24 @@ class ProsesController extends Controller
             return back();
         } else {
             toast('Gagal!', 'error')->autoClose(7000);
+            return back();
+        }
+    }
+
+
+    public function pulang(Request $request, $PasienID)
+    {
+        // dd($request);
+        $data3 = isPulang::where('pasienID', $PasienID)
+            ->update([
+                'isPulang' => $request->isPulang
+            ]);
+
+        if ($data3) {
+            toast('Berhasil! Pasien Bali Muleh', 'success')->autoClose(5000);
+            return back();
+        } else {
+            toast('Gagal Tersimpan!', 'error')->autoClose(5000);
             return back();
         }
     }

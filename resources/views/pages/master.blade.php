@@ -27,8 +27,13 @@
   <link rel="stylesheet" href="/src/plugins/datepicker/datepicker3.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="/src/plugins/daterangepicker/daterangepicker-bs3.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="/src/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- DataTables -->
+  <script src="/src/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="/src/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -53,7 +58,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
+          {{-- <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
               <span class="label label-success">4</span>
@@ -128,7 +133,7 @@
               </li>
               <li class="footer"><a href="#">See All Messages</a></li>
             </ul>
-          </li>
+          </li> --}}
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -390,7 +395,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.3
     </div>
-    <strong>Copyright &copy; 2023 <a href="http://almsaeedstudio.com">IT-RSNR AVENGER</a>.</strong> All rights
+    <strong>Copyright &copy; 2023 <a href="https://rsnurrohmah.co.id/">IT-RSNR AVENGER</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -400,9 +405,6 @@
 <!-- jQuery UI 1.11.4 --> 
 <script src="/src/dist/js/jquery.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
 <!-- Bootstrap 3.3.6 -->
 <script src="/src/bootstrap/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
@@ -410,6 +412,8 @@
 <script src="/src/plugins/morris/morris.min.js"></script>
 <!-- Sparkline -->
 <script src="/src/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css"></script>
+<script src="/src/plugins/datatables/jquery.dataTables.min.js"></script>
 <!-- jvectormap -->
 <script src="/src/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="/src/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
@@ -417,7 +421,7 @@
 <script src="/src/plugins/knob/jquery.knob.js"></script>
 <!-- daterangepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="/src/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <!-- datepicker -->
 <script src="/src/plugins/datepicker/bootstrap-datepicker.js"></script>
 <!-- Bootstrap WYSIHTML5 -->

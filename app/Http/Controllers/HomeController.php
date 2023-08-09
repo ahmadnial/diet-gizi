@@ -74,10 +74,22 @@ class HomeController extends Controller
         // return view('pages.index', ['collection' => $collection]);
     }
 
+    public function perinatal()
+    {
+        $source = file_get_contents('http://192.168.10.5:9173/api-dietgizi/api/listAll');
+        $collection = json_decode($source, true);
+        $getval = getDiet::all();
+        // dd($collection);
+        return view('pages.perinatal', ['collection' => $collection, 'getval' => $getval]);
+        // return view('pages.index', ['collection' => $collection]);
+    }
+
 
     public function dash()
     {
-        $getval = getDiet::all();
+        $getval = getDiet::select('*')
+            ->where('isPulang', '=', '0')
+            ->get();
         return view('pages.dashboard.index', ['getval' => $getval]);
     }
 

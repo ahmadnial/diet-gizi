@@ -60,7 +60,9 @@
                     <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">:</p>
                 </td>
                 <td style="width:189pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
-                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;  {{$item->pasienID}}</p>
+                    {{-- <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;  {{ Str::limit($item->pasienID,7) }}</p> --}}
+                    <p style="margin-top:0pt; margin-bottom:0pt; font-size:11pt;">&nbsp;  {{ $item->pasienID }}</p>
+                    </p>
                 </td>
             </tr>
             <tr style="height:15.75pt;">

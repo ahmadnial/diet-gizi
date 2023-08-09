@@ -22,6 +22,7 @@ Route::get('/matahari', [HomeController::class, 'matahari']);
 Route::get('/tulip', [HomeController::class, 'tulip']);
 Route::get('/lili', [HomeController::class, 'lili']);
 Route::get('/isolasi', [HomeController::class, 'isolasi']);
+Route::get('/perinatal', [HomeController::class, 'perinatal']);
 Route::get('/getDiet', [HomeController::class, 'getLabel']);
 // End User Perawat
 
@@ -35,4 +36,5 @@ Route::get('/dashboard', [HomeController::class, 'dash']);
 Route::get('/cetakPagi/{id}', [HomeController::class, 'cetakPagi']);
 Route::get('/cetakSiang/{id}', [HomeController::class, 'cetakSiang']);
 Route::get('/cetakSore/{id}', [HomeController::class, 'cetakSore']);
+Route::post('/isPulang/{PasienID}', [ProsesController::class, 'pulang']);
 //End Amdin Gizi

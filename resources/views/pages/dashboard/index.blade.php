@@ -35,8 +35,9 @@
                             @csrf --}}
                         <td>
                             {{-- <a href="{{ url('/cetak',$item->id) }}" class="btnprn btn btn btn-primary btn-sm" ><i class="fa fa-folder-open"></i></a>  --}}
-                            {{-- <a href="{{ url('/cetak',$item->id) }}" class="btnprn btn btn btn-primary btn-sm" ><i class="fa fa-print"></i></a>  --}}
                             <button type="" id="" name="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modalViewEdit{{$item['pasienID']}}"><i class="fa fa-folder-open"></i></button>
+                            {{-- <a href="{{ url('/cetak',$item->id) }}" class="btnprn btn btn btn-danger btn-sm" ><i class="fa fa-car"></i></a>  --}}
+                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#isPulang{{$item['pasienID']}}"><i class="fa fa-car"></i></button>
                         </td>
                     {{-- </form> --}}
                 </tr>
@@ -103,6 +104,39 @@
                         </div>
 
                     {{-- END MODAL --}}
+
+                    <!-- The Modal -->
+                        <div class="modal" id="isPulang{{$item['pasienID']}}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Konfirmasi Dulu,mbak!</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                   Yakin Pasien : <b>{{$item['nama']}}</b> Bed : <b>{{$item['bed']}}</b>, Sudah Pulang?
+                                </div>
+                                <form action="{{ url('/isPulang',$item['pasienID']) }}" method="post">
+                                @method("POST")
+                                @csrf
+                                <div class="">
+                                    <input type="hidden" name="isPulang" value="1">
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer"> 
+                                    <button type="submit" class="btn btn-success">Yakin!</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    {{-- END MODAL --}}
+
                 @endforeach 
             </tbody>
             </table>

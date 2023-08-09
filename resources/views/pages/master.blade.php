@@ -7,32 +7,29 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="/src/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href=" {{ asset('/src/bootstrap/css/bootstrap.min.css') }}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/src/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href=" {{ asset('/src/dist/css/AdminLTE.min.css') }}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="/src/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href=" {{ asset('/src/dist/css/skins/_all-skins.min.css') }}">
   <!-- iCheck -->
-  <link rel="stylesheet" href="/src/plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href=" {{ asset('/src/plugins/iCheck/flat/blue.css') }}">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="/src/plugins/morris/morris.css">
+  <link rel="stylesheet" href=" {{ asset('/src/plugins/morris/morris.css') }}">
   <!-- jvectormap -->
-  <link rel="stylesheet" href="/src/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <link rel="stylesheet" href=" {{ asset('/src/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
   <!-- Date Picker -->
-  <link rel="stylesheet" href="/src/plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" href=" {{ asset('/src/plugins/datepicker/datepicker3.css') }}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="/src/plugins/daterangepicker/daterangepicker-bs3.css">
+  <link rel="stylesheet" href=" {{ asset('/src/plugins/daterangepicker/daterangepicker-bs3.css') }}">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="/src/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-  <!-- DataTables -->
-  <script src="/src/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="/src/plugins/datatables/dataTables.bootstrap.min.js"></script>
+  <link rel="stylesheet" href=" {{ asset('/src/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
 
 
 </head>
@@ -401,39 +398,39 @@
 
 
 <!-- jQuery 2.2.0 -->
-<script src="/src/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<script src="{{ asset('src/plugins/jQuery/jQuery-2.2.0.min.js') }}"></script>
 <!-- jQuery UI 1.11.4 --> 
-<script src="/src/dist/js/jquery.min.js"></script>
+<script src="{{ asset('src/dist/js/jquery.min.js') }}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <!-- Bootstrap 3.3.6 -->
-<script src="/src/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ asset('src/bootstrap/js/bootstrap.min.js') }}"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="/src/plugins/morris/morris.min.js"></script>
+<script src="{{ asset('src/plugins/morris/morris.min.js') }}"></script>
 <!-- Sparkline -->
-<script src="/src/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="{{ asset('src/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
 <script src="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css"></script>
-<script src="/src/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{ asset('src/plugins/datatables/jquery.dataTables.min.js') }}"></script>
 <!-- jvectormap -->
-<script src="/src/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="/src/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="{{ asset('src/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
+<script src="{{ asset('src/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
 <!-- jQuery Knob Chart -->
-<script src="/src/plugins/knob/jquery.knob.js"></script>
+<script src="{{ asset('src/plugins/knob/jquery.knob.js') }}"></script>
 <!-- daterangepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <!-- datepicker -->
-<script src="/src/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="{{ asset('src/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="/src/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="{{ asset('src/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
 <!-- Slimscroll -->
-<script src="/src/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="{{ asset('src/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
 <!-- FastClick -->
-<script src="/src/plugins/fastclick/fastclick.js"></script>
+<script src="{{ asset('src/plugins/fastclick/fastclick.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="/src/dist/js/app.min.js"></script>
+<script src="{{ asset('src/dist/js/app.min.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/src/dist/js/pages/dashboard.js"></script>
+<script src="{{ asset('src/dist/js/pages/dashboard.js') }}"></script>
 <script>
   $(function () {
     $("#table1").DataTable();

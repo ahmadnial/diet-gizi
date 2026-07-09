@@ -43,5 +43,3 @@ Route::post('/isPulang/{PasienID}', [ProsesController::class, 'pulang']);
 
 
 
-Route::post('/diet', [DietController::class, 'addDiet']);
-Route::put('/diet', [DietController::class, 'update']);

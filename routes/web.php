@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProsesController;
+use App\Http\Controllers\Api\DietController;
+
 
 /*  
 |--------------------------------------------------------------------------
@@ -38,3 +40,8 @@ Route::get('/cetakSiang/{id}', [HomeController::class, 'cetakSiang']);
 Route::get('/cetakSore/{id}', [HomeController::class, 'cetakSore']);
 Route::post('/isPulang/{PasienID}', [ProsesController::class, 'pulang']);
 //End Amdin Gizi
+
+
+
+Route::post('/diet', [DietController::class, 'addDiet']);
+Route::put('/diet', [DietController::class, 'update']);

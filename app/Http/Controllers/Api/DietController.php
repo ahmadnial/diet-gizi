@@ -79,9 +79,12 @@ class DietController extends Controller
         }
 
         try {
-            // Menggunakan updateOrCreate supaya jika di-submit ulang oleh user, data lama kunjungan tersebut otomatis ter-update (tidak double row)
-            $diet = Diet::updateOrCreate([
-                ['regID' => $request->regID], // Kunci pencarian unik kunjungan
+            // Parameter pertama array (Kunci): Kolom apa yang dicari di DB, dan apa nilainya.
+            // Parameter kedua array (Data): Kolom-kolom lain yang mau dimasukkan/diperbarui.
+            $diet = Diet::updateOrCreate(
+                [
+                    'regID' => $request->regID, // Mencari berdasarkan nama kolom 'regID' dengan isi $request->regID
+                ],
                 [
                     'bed' => $request->bed,
                     'nama' => $request->nama,
@@ -95,7 +98,7 @@ class DietController extends Controller
                     'diet_sore_konsistensi' => $request->diet_sore_konsistensi,
                     'isPulang' => $request->isPulang ?? 0,
                 ],
-            ]);
+            );
 
             return response()->json(
                 [
